@@ -6,21 +6,114 @@
 	<title>Тестовая страница</title>
 	<link rel="icon" href="favicon.ico" type="image/x-icon"> 
 	<meta charset="UTF-8"> 
-	<link href="style.css" rel="stylesheet" type="text/css" href ="1b-ticker.css"> 
+	<link href="style.css" rel="stylesheet" type="text/css" href ="1b-ticker.css" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"> 
 	<style>
+
+		.bulletBlock:after{
+			content:"";
+			display:table;
+			clear:both;
+		}
+
+		.bulletsBlock > div{
+			width: 50%;
+			height:30%;
+			float:left;
+			background:rgba(0,0,0,0.1);
+			margin-left:5%;
+			text-align:center;
+			position:relative;
+			right: 258px;
+			padding-bottom:31.7%;
+			cursor:pointer;
+			-webkit-transition:all 0.35s linear;
+			transition:all 0.35s linear;
+		}
+
+		.bulletsBlock > div:first-child{
+			margin-left:0;
+		}
+
+		.bulletsBlock > div:hover{
+			-webkit-box-shadow: 0 35px 35px -35px #000000;
+			-moz-box-shadow:0 35px 35px -35px #000000;
+			box-shadow: 0 35px 35px -35px #000000;
+		}
+
+		.bullet-item span{
+			line-height: 1.5em;
+			font-size:12.5em;
+			color:#fff;
+			position:absolute;
+			top:0;
+			left:0;
+			display:block;
+			width:100%;
+			-webkit-transition: all 0.35s ease;
+			transition: all 0.35s ease;
+		}
+
+		.bulletsBlock > div:hover span.iconBullet{
+			line-height:1.35em;
+			font-size: 10.625em;
+			top:-2.7%;
+		}
+
+		.titleBullet, .hideText{
+			position:absolute;
+			left:0;
+			bottom:0;
+			text-align: center;
+			width:100%;
+			margin:0;
+			color: #fff;
+			-webkit-transition:all 0.35s ease;
+			transition: all 0.35s ease;
+		}
+
+		.titleBullet{
+			line-height:2.5em;
+			font-size:2.19em;
+			background:#3b3b3b;
+			z-index:10;
+		}
+
+		.hideText{
+			line-height:1.3em;
+			font-size:1.25em;
+			padding:1em 0;
+			background:#3b3b3b;
+			font-weight:300;
+			z-index:8;
+			height:50px;
+			-webkit-transition:all 0.35s linear 0.2s;
+			transition: all 0.35s linear 0.2s;
+		}
+
+		.bulletsBlock > div:hover p.titleBullet{
+			bottom:80px;
+		}
+
+		.bulletsBlock > div:hover p.hideText{
+			background:#454545;
+		}
+
 		.tcontainer{
 			width:100%;
 			overflow:hidden;
 		}
+
 		.ticker-wrap{
 			width:100%;
 			padding-left:100%;
 			background-color:lavenderblush;
 		}
+
 		@keyframes ticker{
 			0%{transform:translate3d(0,0,0);}
 			100%{transform:translate3d(-100%,0,0);}
 		}
+
 		.ticker-move{
 			display:inline-block;
 			white-space:nowrap;
@@ -30,22 +123,27 @@
 			animation-name:ticker;
 			animation-duration:10s;
 		}
+
 		.ticker-move:hover{
 			animation-play-state:paused;
 		}
+
 		.ticker-item{
 			display:inline-block;
 			padding:0 2rem;
 		}
+
 		body{
 			background:#87CEEB;
 		}
+
 		.wrapper{
 			margin:0 auto;
 			width:900px;
 			overflow:hidden;
 			margin-top:20px;
 		}
+
 		@keyframes fade{
 			0%{opacity: 0;}
 			10%{opacity:1;}
@@ -59,6 +157,7 @@
 			90%{opacity:0;}
 			100%{opacity:0;}
 		}
+
 		.wrapper img{
 			position:absolute;
 			border-style:groove;
@@ -72,6 +171,7 @@
 			animation-duration:20s;
 			animation-iteration-count:infinite;
 		}
+
 		.wrapper img:nth-child(1){animation-delay:0s;}
 		.wrapper img:nth-child(2){animation-delay:5s;}
 		.wrapper img:nth-child(3){animation-delay:10s;}
@@ -79,6 +179,7 @@
 		body {
 			font-synthesis: family:Arial, sans-serif;
 		}
+
 		.letter{
 			color:red;
 			font-size: 70%;
@@ -86,9 +187,11 @@
 			position:relative;
 			top:1px;
 		}
+
 		body {
 			font-synthesis: family:Arial, sans-serif;
 		}
+
 		.bltext{
 			color:blue;
 			font-size:150%;
@@ -96,6 +199,7 @@
 			position:relative;
 			top:0.5px;
 		}
+
 	</style>
 	<style type="text/css">
 		.userlog{
@@ -128,8 +232,10 @@
 
 <body> 
 	<body style="background-color: powderblue">
+		<div style ="text-shadow:black 0 0 3px">
 	<header style="background-color:deepskyblue; height:200px">
 	</header>
+</div>
 	<div>
 		<h1 align ="center" style="color:white"><span class = "ukgres"><strong>Южно-Кузбасская</strong></span></h1>
 		<div style ="position:relative; bottom:195px; left:-8px">
@@ -195,5 +301,13 @@
     setInterval(function(){
     document.getElementById('current_date_time_block').innerHTML = date_time();},1000);
 </script>
+<div class = "bulletsBlock">
+	<div class = "bullet-item">
+		<span class="iconBullet fa fa-cog"></span>
+		<p class="titleBullet">С 1951 года</p>
+		<p class="hideText">Первая в Сибири электростанция, где было начато освоение<br>отечественного оборудования на высоких параметрах пара.</p>
+	</div>
+
+</div>
 </body> 
 </html>
