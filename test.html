@@ -2,45 +2,198 @@
 <html> 
 
 <head> 
-	<title>Заголовок</title>
+	
+	<title>Тестовая страница</title>
 	<link rel="icon" href="favicon.ico" type="image/x-icon"> 
 	<meta charset="UTF-8"> 
-	<link rel="stylesheet" href="style.css"> 
-	<script src="script.js" type="text/javascript"></script>
+	<link href="style.css" rel="stylesheet" type="text/css" href ="1b-ticker.css"> 
+	<style>
+		.tcontainer{
+			width:100%;
+			overflow:hidden;
+		}
+		.ticker-wrap{
+			width:100%;
+			padding-left:100%;
+			background-color:lavenderblush;
+		}
+		@keyframes ticker{
+			0%{transform:translate3d(0,0,0);}
+			100%{transform:translate3d(-100%,0,0);}
+		}
+		.ticker-move{
+			display:inline-block;
+			white-space:nowrap;
+			padding-right:100%;
+			animation-iteration-count:infinite;
+			animation-timing-function:linear;
+			animation-name:ticker;
+			animation-duration:10s;
+		}
+		.ticker-move:hover{
+			animation-play-state:paused;
+		}
+		.ticker-item{
+			display:inline-block;
+			padding:0 2rem;
+		}
+		body{
+			background:#87CEEB;
+		}
+		.wrapper{
+			margin:0 auto;
+			width:900px;
+			overflow:hidden;
+			margin-top:20px;
+		}
+		@keyframes fade{
+			0%{opacity: 0;}
+			10%{opacity:1;}
+			20%{opacity:1;}
+			30%{opacity:1;}
+			40%{opacity:0;}
+			50%{opacity:0;}
+			60%{opacity:0;}
+			70%{opacity:0;}
+			80%{opacity:0;}
+			90%{opacity:0;}
+			100%{opacity:0;}
+		}
+		.wrapper img{
+			position:absolute;
+			border-style:groove;
+			border-width:3px;
+			right:300px;
+			margin:0 auto;
+			width:620px;
+			overflow:hidden;
+			opacity:0;
+			animation-name:fade;
+			animation-duration:20s;
+			animation-iteration-count:infinite;
+		}
+		.wrapper img:nth-child(1){animation-delay:0s;}
+		.wrapper img:nth-child(2){animation-delay:5s;}
+		.wrapper img:nth-child(3){animation-delay:10s;}
+		.wrapper img:nth-child(4){animation-delay:15s;}
+		body {
+			font-synthesis: family:Arial, sans-serif;
+		}
+		.letter{
+			color:red;
+			font-size: 70%;
+			font-family:serif;
+			position:relative;
+			top:1px;
+		}
+		body {
+			font-synthesis: family:Arial, sans-serif;
+		}
+		.bltext{
+			color:blue;
+			font-size:150%;
+			font-family:serif;
+			position:relative;
+			top:0.5px;
+		}
+	</style>
+	<style type="text/css">
+		.userlog{
+			width: 200px;
+			padding:5px;
+			padding-right:10px;
+			border:hidden 1px black;
+			position:relative;
+			top:230px;
+			left:107px;
+		}
+		.ukgres{
+			position:absolute;
+			top:30px;
+			left:40px;
+			text-shadow:black 0 0 5px;
+		}
+		.dopinfo{
+			position:relative;
+			top:75px;
+			left:310px;
+		}
+		.dopinfo1{
+			position: initial;
+			top:75px;
+			right:150px;
+		}
+	</style>
 </head> 
 
 <body> 
-
-		<form action ="предполагает_ссылку_на_скрипт">
-			<strong>Логин </strong>
-		<input type="text" name="name">
-		<p><strong>Пароль</strong>
-		<input type="text" name="email"></p>
-		<input type="submit" value="Вход">
+	<body style="background-color: powderblue">
+	<header style="background-color:deepskyblue; height:200px">
+	</header>
+	<div>
+		<h1 align ="center" style="color:white"><span class = "ukgres"><strong>Южно-Кузбасская</strong></span></h1>
+		<div style ="position:relative; bottom:195px; left:-8px">
+		<h1 align ="center" style="color:white"><span class = "ukgres"><strong>ГРЭС</strong></span></h1>
+	</div>
+	</div>
+	<div style="position:relative; bottom:100px; left:20px">
+		<img src="mechel.png" width="175" height="90" alt="Мечел">
+	</div>
+	<div style ="position:relative; bottom:515px; left: 910px">
+	<form action ="wallpaper.jpg">
+		<div class=userlog><strong>Логин </strong>
+			<input type="text" name="name">
+			<p><strong>Пароль</strong>
+			<input type="text" name="email"></p>
+			<input type="submit" value="Вход">
+		</div>
 	</form>
-	
+</div>
+	<div style ="position: relative; bottom: 312px; left: 1100px">
+		<form action ="wallpaper.jpg">
+		<input type ="submit" value="Забыли пароль?">
+	</form>
+	</div>
+	<div style ="position:relative; bottom: 485px">
+	<div class="tcontainer"><div class="ticker-wrap"><div class="ticker-move">
+		<div class="ticker-item">Комсомольская улица, 20, Калтан</div>
+		<div class="ticker-item">+7 38472 3-92-33</div>
+		<div class="ticker-item">пн-чт 08:00-17:15, перерыв 12:00-13:00</div>
+		<div class="ticker-item">пт 08:00-16:00, перерыв 12:00-13:00</div>
+	</div>
+</div>
+	<div class="wrapper">
+		<p><img src="gres.jpg" width ="200" height ="250" alt = "first"></p>
+		<img src="gres1.jpg" width ="200" height ="250" alt = "second">
+		<img src="gres2.jpg" width ="200" height ="250" alt = "third">
+		<img src="gres3.jpg" width ="200" height ="250" alt = "fourth">
+	</div>
 
-	<h1><strong>Тестирование разметок (номер один)</strong></h1>
+	<div style = "position:relative; bottom:20px; left:580px">
+	<div id="current_date_time_block"></div>
+<script type="text/javascript">
+    function zero_first_format(value)
+    {
+        if (value < 10)
+        {
+            value='0'+value;
+        }
+        return value;
+    }
+    function date_time()
+    {
+        var current_datetime = new Date();
+        var day = zero_first_format(current_datetime.getDate());
+        var month = zero_first_format(current_datetime.getMonth()+1);
+        var year = current_datetime.getFullYear();
+        var hours = zero_first_format(current_datetime.getHours());
+        var minutes = zero_first_format(current_datetime.getMinutes());
+        var seconds = zero_first_format(current_datetime.getSeconds());
 
-	<ul>
-		<li>Тестирование нумерации</li>
-		<li>Всё ещё визуальное тестирование</li>
-	</ul>
-
-	<ol>
-		<li>Тестирование</li>
-		<li>Всё ещё тест</li>
-	</ol>
-
-	<em><strong>Тестирование абзацев</em></strong> 
-	<p>Допустим, есть некоторый текст, который я набрал
-	совершенно не задумаваясь над содержанием.</p>
-	<p>Тем не менее, текст предполагает разметку абзацев,
-	что будут визуализированы в документе.</p>
-
-	<img src="wallpaper.jpg" alt="xxxtentacion">
-
-	<h2><em>Второе вложение.</em></h2>
-
+        return day+"."+month+"."+year+" "+hours+":"+minutes+":"+seconds;
+    }
+    setInterval(function(){
+    document.getElementById('current_date_time_block').innerHTML = date_time();},1000);
+</script>
 </body> 
 </html>
