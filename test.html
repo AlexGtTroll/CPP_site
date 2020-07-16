@@ -6,8 +6,37 @@
 	<title>Тестовая страница</title>
 	<link rel="icon" href="favicon.ico" type="image/x-icon"> 
 	<meta charset="UTF-8"> 
-	<link rel="stylesheet" href="style.css"> 
+	<link href="style.css" rel="stylesheet" type="text/css" href ="1b-ticker.css"> 
 	<style>
+		.tcontainer{
+			width:100%;
+			overflow:hidden;
+		}
+		.ticker-wrap{
+			width:100%;
+			padding-left:100%;
+			background-color:lavenderblush;
+		}
+		@keyframes ticker{
+			0%{transform:translate3d(0,0,0);}
+			100%{transform:translate3d(-100%,0,0);}
+		}
+		.ticker-move{
+			display:inline-block;
+			white-space:nowrap;
+			padding-right:100%;
+			animation-iteration-count:infinite;
+			animation-timing-function:linear;
+			animation-name:ticker;
+			animation-duration:10s;
+		}
+		.ticker-move:hover{
+			animation-play-state:paused;
+		}
+		.ticker-item{
+			display:inline-block;
+			padding:0 2rem;
+		}
 		body {
 			font-synthesis: family:Arial, sans-serif;
 		}
@@ -59,16 +88,20 @@
 </head> 
 
 <body> 
+	<body style="background-color: powderblue">
 	<header style="background-color:deepskyblue; height:200px">
 	</header>
 	<div>
-		<h1 align ="center" style="color:white"><span class = "ukgres"><strong>Южно-Кузбасская ГРЭС</strong></span></h1>
+		<h1 align ="center" style="color:white"><span class = "ukgres"><strong>Южно-Кузбасская</strong></span></h1>
+		<div style ="position:relative; bottom:195px; left:-8px">
+		<h1 align ="center" style="color:white"><span class = "ukgres"><strong>ГРЭС</strong></span></h1>
 	</div>
-	<div style="position:relative; bottom:200px; left:20px">
-		<img src="mechel.png" width="350" height="180" alt="Мечел">
 	</div>
-	<div style ="position:relative; bottom:610px; left: 910px">
-	<form action ="предполагает_ссылку_на_скрипт">
+	<div style="position:relative; bottom:100px; left:20px">
+		<img src="mechel.png" width="175" height="90" alt="Мечел">
+	</div>
+	<div style ="position:relative; bottom:515px; left: 910px">
+	<form action ="wallpaper.jpg">
 		<div class=userlog><strong>Логин </strong>
 			<input type="text" name="name">
 			<p><strong>Пароль</strong>
@@ -76,9 +109,18 @@
 			<input type="submit" value="Вход">
 		</div>
 	</form>
-	<div style = "position:relative">
-		<a href="ссылка_куда-то">Забыли пароль?</a>
-	</div>
 </div>
+	<div style ="position: relative; bottom: 312px; left: 1100px">
+		<form action ="wallpaper.jpg">
+		<input type ="submit" value="Забыли пароль?">
+	</form>
+	</div>
+	<div style ="position:relative; bottom: 485px">
+	<div class="tcontainer"><div class="ticker-wrap"><div class="ticker-move">
+		<div class="ticker-item">Комсомольская улица, 20, Калтан</div>
+		<div class="ticker-item">+7 38472 3-92-33</div>
+		<div class="ticker-item">пн-чт 08:00-17:15, перерыв 12:00-13:00</div>
+		<div class="ticker-item">пт 08:00-16:00, перерыв 12:00-13:00</div>
+	</div>
 </body> 
 </html>
