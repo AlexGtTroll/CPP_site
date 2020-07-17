@@ -3,21 +3,14 @@
 
 <head> 
 	
-	<title>Тестовая страница</title>
+	<title>ЮК ГРЭС</title>
 	<link rel="icon" href="favicon.ico" type="image/x-icon"> 
 	<meta charset="UTF-8"> 
-	<link href="style.css" rel="stylesheet" type="text/css" href ="1b-ticker.css"> 
+	<link href="style.css" rel="stylesheet" type="text/css"> 
 	<style>
 
-		.news{
-			position:relative;
-			right:250px;
-			top:130px;
-			font-size: 2em;
-			text-shadow: black 0 0 0.5px;
-		}
-
 		.ruk{
+			width: 900px;
 			position:relative;
 			right:1200px;
 			top:165px;
@@ -184,14 +177,14 @@
 			overflow:hidden;
 			opacity:0;
 			animation-name:fade;
-			animation-duration:20s;
+			animation-duration:30s;
 			animation-iteration-count:infinite;
 		}
 
 		.wrapper img:nth-child(1){animation-delay:0s;}
-		.wrapper img:nth-child(2){animation-delay:5s;}
-		.wrapper img:nth-child(3){animation-delay:10s;}
-		.wrapper img:nth-child(4){animation-delay:15s;}
+		.wrapper img:nth-child(2){animation-delay:20s;}
+		.wrapper img:nth-child(3){animation-delay:30s;}
+		.wrapper img:nth-child(4){animation-delay:40s;}
 		body {
 			font-synthesis: family:Arial, sans-serif;
 		}
@@ -247,21 +240,20 @@
 </head> 
 
 <body> 
-	<body style="background-color: powderblue">
 		<div style ="text-shadow:black 0 0 3px">
 	<header style="background-color:deepskyblue; height:200px">
 	</header>
 </div>
-	<div>
-		<h1 align ="center" style="color:white"><span class = "ukgres"><strong>Южно-Кузбасская</strong></span></h1>
+	<div style = "background: red">
+		<h1 align ="center" style="color:white"><span class = "ukgres">Южно-Кузбасская</span></h1>
 		<div style ="position:relative; bottom:195px; left:-8px">
-		<h1 align ="center" style="color:white"><span class = "ukgres"><strong>ГРЭС</strong></span></h1>
+		<h1 align ="center" style="color:white"><span class = "ukgres">ГРЭС</span></h1>
 	</div>
 	</div>
-	<div style="position:relative; bottom:100px; left:20px">
+	<div style="position:relative; bottom:100px; left:20px; width: 180px">
 		<img src="mechel.png" width="175" height="90" alt="Мечел">
 	</div>
-	<div style ="position:relative; bottom:515px; left: 910px">
+	<div style ="position:fixed; bottom:515px; left: 910px">
 	<form action ="wallpaper.jpg">
 		<div class=userlog><strong>Логин </strong>
 			<input type="text" name="name">
@@ -271,7 +263,7 @@
 		</div>
 	</form>
 </div>
-	<div style ="position: relative; bottom: 312px; left: 1100px">
+	<div style ="position: fixed; bottom: 290px; left: 1100px">
 		<form action ="wallpaper.jpg">
 		<input type ="submit" value="Забыли пароль?">
 	</form>
@@ -280,8 +272,7 @@
 	<div class="tcontainer"><div class="ticker-wrap"><div class="ticker-move">
 		<div class="ticker-item">Комсомольская улица, 20, Калтан</div>
 		<div class="ticker-item">+7 38472 3-92-33</div>
-		<div class="ticker-item">пн-чт 08:00-17:15, перерыв 12:00-13:00</div>
-		<div class="ticker-item">пт 08:00-16:00, перерыв 12:00-13:00</div>
+		<div class="ticker-item">пн-пт 08:00-17:00, перерыв 12:00-13:00</div>
 	</div>
 </div>
 	<div class="wrapper">
@@ -321,14 +312,18 @@
 	<div class = "bullet-item">
 		<span class="iconBullet fa fa-cog"></span>
 		<p class="titleBullet">С 1951 года</p>
-		<p class="hideText">Первая в Сибири электростанция, где было начато освоение<br>отечественного оборудования на высоких параметрах пара.</p>
+		<p class="hideText">Первая в Сибири электростанция, где было начато освоение<br>sотечественного оборудования на высоких параметрах пара.</p>
 	</div>
 </div>
 <div class ="ruk">
+	<div style ="width:830px; height:600px">
 	Руководство:
 </div>
-<div class ="news">
-	Новости:
+</div>
+<div style ="position:relative; right:600px; bottom: 395px; width: 300px; height: 700px">
+	<div>
+		<img src = "ruk.png">
 	</div>
+</div>
 </body> 
 </html>
