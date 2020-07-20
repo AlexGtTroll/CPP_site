@@ -25,15 +25,15 @@
 		}
 
 		.bulletsBlock > div{
-			width: 625px;
-			height:1px;
+			width: 625.5px;
+			height:-100px;
 			float:left;
-			background:rgba(0,0,0,0.1);
-			margin-left:5%;
+			background:rgba(0,0,0,0.08);
+			margin-left:10%;
 			text-align:center;
 			position:relative;
 			right: 258px;
-			padding-bottom:31.7%;
+			padding-bottom:27.7%;
 			cursor:pointer;
 			-webkit-transition:all 0.35s linear;
 			transition:all 0.35s linear;
@@ -178,7 +178,7 @@
 			overflow:hidden;
 			opacity:0;
 			animation-name:fade;
-			animation-duration:5s;
+			animation-duration:20s;
 			animation-iteration-count:infinite;
 		}
 
@@ -225,7 +225,7 @@
 			position:absolute;
 			top:30px;
 			left:40px;
-			text-shadow:black 0 0 5px;
+			text-shadow:black 0 0 8px;
 		}
 		.dopinfo{
 			position:relative;
@@ -254,7 +254,7 @@
 	<div style="position:relative; bottom:100px; left:20px; width: 180px">
 		<img src="mechel.png" width="175" height="90" alt="Мечел">
 	</div>
-	<div style ="position:fixed; bottom:950px; left: 910px">
+	<div style ="position:relative; bottom:525px; left: 910px">
 	<form action ="wallpaper.jpg">
 		<div class=userlog><strong>Логин </strong>
 			<input type="text" name="name">
@@ -264,27 +264,20 @@
 		</div>
 	</form>
 </div>
-	<div style ="position: fixed; bottom: 726px; left: 1100px">
+	<div style ="position: relative; bottom: 321px; left: 1100px">
 		<form action ="wallpaper.jpg">
 		<input type ="submit" value="Забыли пароль?">
 	</form>
 	</div>
-	<div style ="position:relative; bottom: 320px">
-	<div class="tcontainer"><div class="ticker-wrap"><div class="ticker-move">
-		<div class="ticker-item">Комсомольская улица, 20, Калтан</div>
-		<div class="ticker-item">+7 38472 3-92-33</div>
-		<div class="ticker-item">пн-пт 08:00-17:00, перерыв 12:00-13:00</div>
-	</div>
-</div>
-<div style ="position: relative; left: 1px">
+<div style ="position: relative; bottom:661px; left: 21px">
 	<div class="wrapper">
-		<p><img src="gres.jpg" width ="201" height ="250" alt = "first"></p>
-		<img src="gres1.jpg" width ="201" height ="250" alt = "second">
-		<img src="gres2.jpg" width ="201" height ="250" alt = "third">
-		<img src="gres3.jpg" width ="201" height ="250" alt = "fourth">
+		<p><img src="gres.jpg" width ="200" height ="250" alt = "first"></p>
+		<img src="gres1.jpg" width ="200" height ="250" alt = "second">
+		<img src="gres2.jpg" width ="200" height ="250" alt = "third">
+		<img src="gres3.jpg" width ="200" height ="250" alt = "fourth">
 	</div>
 </div>
-	<div style = "position:relative; top:100px; left:580px; width: 150px">
+	<div style = "position:relative;  left:580px; width: 150px; bottom: 490px">
 	<div id="current_date_time_block"></div>
 <script type="text/javascript">
     function zero_first_format(value)
@@ -310,6 +303,8 @@
     setInterval(function(){
     document.getElementById('current_date_time_block').innerHTML = date_time();},1000);
 </script>
+</div>
+<div style ="position: relative; bottom: 485px; left: 600px">
 <div class = "bulletsBlock">
 	<div class = "bullet-item">
 		<span class="iconBullet fa fa-cog"></span>
@@ -317,17 +312,25 @@
 		<p class="hideText">Первая в Сибири электростанция, где было начато освоение<br>отечественного оборудования на высоких параметрах пара.</p>
 	</div>
 </div>
+</div>
 <div style ="position: relative; bottom: 160px">
 <div class ="ruk">
-	<div style ="width:830px; height:600px; position: relative; bottom:-30px">
+	<div style ="width:830px; height:600px; position: relative; top: 500px">
 	Руководство:
 </div>
 </div>
-<div style ="position:relative; right:600px; bottom: 360px; width: 300px; height: 700px">
+<div style ="position:relative; right:600px; bottom: 360px; width: 300px; height: 700px; border-color: black">
 	<div>
 		<img src = "ruk.png">
 	</div>
 </div>
+</div>
+<div style ="position:relative; left:342px; bottom: 1439px; height:18px; width:626px">
+	<div class="tcontainer"><div class="ticker-wrap"><div class="ticker-move">
+		<div class="ticker-item">Комсомольская улица, 20, Калтан</div>
+		<div class="ticker-item">+7 38472 3-92-33</div>
+		<div class="ticker-item">пн-пт 08:00-17:00, перерыв 12:00-13:00</div>
+	</div>
 </div>
 </body> 
 </html>
