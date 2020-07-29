@@ -1,35 +1,69 @@
 <?php
-
+///////////////////ДЛЯ ПОДКЛЮЧЕНИЯ///////////////////////////////////////////
 $server = 'NEKRONAMICON\SANYA';
 $name = 'sa';
 $pass = '123';
-
+////////////////////////////////////////////////////////////////////////////
 $link = mssql_connect($server, $name, $pass);
 $query = "SELECT * FROM datainf";
 
 if (!$link){
-	die ('DEAD WAY');
+	die ('Error: '. mssql_get_last_message());
 }
 
 mssql_select_db('test',$link);
-
-$result = mssql_query($query);
-if($result)
+////////////////////////////////////////////////////////////////////////
+$sql = "SELECT * FROM datainf ORDER BY id";
+$result = mssql_query($sql);
+$count=mssql_num_rows($result);
+if(!mssql_query($sql))
 {
-	$rows = mssql_num_rows($result);
-
-	echo "<table><tr><th>Id</th><th>LOGIN</th><th>password</th><th>name</th><th>job</th></tr>";
-	for ($i=0; $i<$rows; ++$i){
-		$row = mssql_fetch_row($result);
-		echo "<tr>";
-		for ($j=0; $j<5;++$j) echo "<td>$row[$j]</td>";
-			echo "</tr>";
+	die('Error: ' . mssql_get_last_message());
+}
+else
+{
+	$login = array();
+	$password = array();
+	$id = array();
+	$name = array();
+	$profess = array();
+	while($row=mssql_fetch_array($result))
+	{
+		$id[]=$row['id'];
+		echo $row['id'];
+		echo nl2br ("\n");
+		$login[]=$row['login'];
+		echo $row['login'];
+		echo nl2br ("\n");
+		$password[] = $row['password'];
+		echo $row['password'];
+		echo nl2br ("\n");
+		$name[] = $row['name'];
+		echo $row['name'];
+		echo nl2br ("\n");
+		$profess[] = $row['profess'];
+		echo $row['profess'];
+		echo nl2br ("\n");
 	}
-	echo "</table>";
+}
+mssql_free_result($result);
+///////////////////////////////////////////////////////////////////
+echo nl2br ("\n");
 
-	mssql_free_result($result);
+/*$query = "SELECT login, password, name, profess FROM datainf";
+for ($i = 0; $i<count($id); ++$i)
+{
+$result = mssql_query($query);
+$id[$i] = (string)mssql_fetch_assoc($result);
 }
 
+
+$ids = array();
+while ($titlerows = mssql_fetch_row($result)){
+$ids[] = $titlerows[0];
+}
+
+echo $ids[0];*/
 //$show = mssql_query('SELECT * FROM datainf WHERE id = 1');
 //$empl = mssql_fetch_array($show);
 
