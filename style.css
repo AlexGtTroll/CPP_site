@@ -1,3 +1,9 @@
+.subscribe div{
+	margin:.375em 0 .375em 0.125em;
+	font-size:.9375em;
+}
+body {text-align:center;margin:0}
+
 .painting{
 			position: absolute;
 		color: gray;
