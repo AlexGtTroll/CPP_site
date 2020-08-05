@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>ОТЧЕТЫ</title>
+	<link rel="icon" href="favicon.ico" type="image/x-icon"> 
+	<link rel ="stylesheet" type ="text/css" href="style.css">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name = "viewport" content = "width=device-width,initial-scale=1">
+</head>
+
+	<style>
+
+		.head{
+			text-shadow: 1px 1px 1px #000;
+			border-style: normal;
+			border-color: grey;
+		}
+
+	</style>
+
+	<style type = "text/css">
+
+	</style>
+
+	<body>
+		<div class = "head" style = "position: relative">
+		<h1 align = "center">Здесь, допустим, пишут отчеты</h1>
+		<h2 align = "center">Конкретно эта страница для отчетов по трубам, что обычно горят</h2>
+	</div>
+
+
+<?php
+if (isset($_POST['comm'])){
+////Переменные с формы////
+$obj_name = "труба №1"
+$comment = $_POST['comm'];
+//---------Данные для подключения-------------
+$server = 'NEKRONAMICON\SANYA';
+$namecon = 'sa';
+$pass = '123';
+$database = 'test';
+$db_table = 'ext';
+/////////////////////////////////////////////
+
+$link = mssql_connect($server, $namecon, $pass);
+
+if (!$link){
+	die ('Error: '. mssql_get_last_message());
+}
+
+mssql_select_db($database,$link);
+/////////////////////////////////////////////
+$name = query("SELECT name FROM datainf WHERE id = 1");
+$result = $mssql->query("INSERT INTO".$db_table."(obj,comm,nameS) VALUES('$obj_name','$comment','$name','$dtime')");
+
+if ($result == true){
+	echo "Информация занесена в базу данных";
+}else{
+	echo "Информация не занесена в базу данных";
+}
+}
+?>
+
+<div style = "position: relative">
+<form action = "" method = "POST">
+	<p><b>Отчитываться сразу снизу прямо здесь и сейчас (для красильщиков)</b></p>
+	<p><textarea name = "comment" style = "padding-bottom:150px;
+	font-size:16px; max-height:50px; max-width:500px;
+	 min-height:50px; min-width:500px"></textarea></p>
+	 <input type = "submit" value ="OK">
+	</form>
+	</div>
+
+	<div style = "position: absolute; left: 700px; bottom: 330px">
+		<p><a href = "tubes.html"><img src = "imgautos/kraska.jpg" alt = "изображение труб" title = "состояние труб"></a></p>
+	</div>
+
+<!--<div style = "position: relative">
+<form method = "POST" action = "">
+	<p><b>Отчитываться сразу снизу прямо здесь и сейчас (для кочегаров)</b></p>
+	<p><textarea name = "comment" style = "padding-bottom:150px;
+font-size:16px; max-height:50px; max-width:500px;
+	 min-height:50px; min-width:500px"></textarea></p>
+	  <input type = "submit" value ="OK">
+	</form>
+	</div>
+	<div style = "position: relative">
+<form method = "POST" action = "">
+	<p><b>Отчитываться сразу снизу прямо здесь и сейчас (для тех, кто остался)</b></p>
+	<p><textarea name = "comment" style = "padding-bottom:150px;
+font-size:16px; max-height:50px; max-width:500px;
+	 min-height:50px; min-width:500px"></textarea></p>
+	  <input type = "submit" value ="OK">
+	</form>
+	</div>
+	</body>-->
+</html>

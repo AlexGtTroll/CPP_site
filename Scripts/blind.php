@@ -50,56 +50,7 @@ mssql_free_result($result);
 ///////////////////////////////////////////////////////////////////
 echo nl2br ("\n");
 
-/*$query = "SELECT login, password, name, profess FROM datainf";
-for ($i = 0; $i<count($id); ++$i)
-{
-$result = mssql_query($query);
-$id[$i] = (string)mssql_fetch_assoc($result);
-}
 
-
-$ids = array();
-while ($titlerows = mssql_fetch_row($result)){
-$ids[] = $titlerows[0];
-}
-
-echo $ids[0];*/
-//$show = mssql_query('SELECT * FROM datainf WHERE id = 1');
-//$empl = mssql_fetch_array($show);
-
-
-
-/*if (count($boy)>=5)
-{
-	var_dump($boy);
-}
-
-else echo 'vse horosho';*/
-
-/*for ($i=0; $i<5; $i++)   // count($empl)
-{
-	echo "$empl[$i] ";
-}
-
-mssql_free_result($show);
-
-echo nl2br ("\n");
-
-$print_test = mssql_query('SELECT * FROM datainf WHERE id = 2');
-$bid = mssql_fetch_array($print_test);    //$"_".{[login][id]}
-for ($i=0; $i<5;$i++)
-{
-	echo "$bid[$i] ";
-}
-
-mssql_free_result($print_test);
-
-echo nl2br ("\n");
-
-$nametest = mssql_query('SELECT login FROM datainf WHERE id = 3');
-$name = mssql_fetch_array($nametest);
-
-echo "$name[0]";*/
 
 mssql_close($link);
 ?>
